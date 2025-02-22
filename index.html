@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProductPulse Landing Page</title>
+  <!-- Google Fonts: Poppins -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />  
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <!-- Preloader (Skeleton Loader) -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Sticky Navigation -->
+  <header>
+    <div class="nav-left">
+        <button id="darkModeToggle" title="Toggle Dark Mode">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="5" stroke="blue" stroke-width="2"/>
+                <path d="M12 2V4" stroke="blue" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 20V22" stroke="blue" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4.22 4.22L5.64 5.64" stroke="blue" stroke-width="2" stroke-linecap="round"/>
+                <path d="M18.36 18.36L19.78 19.78" stroke="blue" stroke-width="2" stroke-linecap="round"/>
+                <path d="M2 12H4" stroke="blue" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20 12H22" stroke="blue" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4.22 19.78L5.64 18.36" stroke="blue" stroke-width="2" stroke-linecap="round"/>
+                <path d="M18.36 5.64L19.78 4.22" stroke="blue" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+
+        </button>
+    </div>
+    <div class="nav-center">
+      <div class="logo" id="logo">ProductPulse</div>
+    </div>
+    <div class="nav-right">
+      <button id="sideMenuToggle" title="Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Side Menu with Close Button -->
+  <div class="side-menu " id="sideMenu">
+    <button id="sideMenuClose" class="side-menu-close" title="Close Menu">&times;</button>
+    <div class="menu-header">
+      <div class="menu-logo">ProductPulse</div>
+      <div class="tagline">Elevate Your SaaS</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#value-prop">Value Prop</a></li>
+        <li><a href="#trust-badges">Trust</a></li>
+        <li><a href="#dynamic-counter">Counter</a></li>
+        <li><a href="#feature-highlights">Highlights</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#social-proof">Social Proof</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#signup" class="side-cta">Start Free Trial</a>
+  </div>
+
+  <!-- Hero Section with Dynamic Gradient & Floating Shape (with Parallax) -->
+  <div class="hero animate-on-scroll" id="hero">
+    <div class="hero-gradient"></div>
+    <div class="floating-shape" style="top:20%; left:80%; animation-duration:8s;"></div>
+    <div class="hero-content">
+      <p class="pretext">Discover Innovation</p>
+      <h1 class="hero-header">Revolutionize Your SaaS Experience</h1>
+      <p class="hero-text">A sleek landing page to transform casual visitors into loyal customers.</p>
+      <div class="hero-buttons">
+        <button class="primaryBtn " onclick="openModal()">Sign Up</button>
+        <button class="secondaryBtn" id="contactBtn">Contact Us</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Enhanced Pricing Section -->
+  
+  <section class="pricing animate-on-scroll" id="pricing">
+    <div class="section-header">
+      <h2>Pricing Plans</h2>
+    </div>
+    <div class="price-toggle">
+      <button id="monthlyBtn" class="active">Monthly</button>
+      <button id="yearlyBtn">Yearly</button>
+    </div>
+    <div class="countdown" id="dealCountdown">
+      Special Deal Ends In: <span id="countdownTimer">00:00:00</span>
+    </div>
+    <div class="pricing-cards">
+      <div class="card" data-monthly="9" data-yearly="90">
+        <h3><i class="fas fa-lightbulb"></i> Basic</h3>
+        <p class="price">$9/month</p>
+        <ul class="plan-features">
+          <li>5 Projects</li>
+          <li>Email Support</li>
+          <li>Basic Analytics</li>
+        </ul>
+        <button class="primaryBtn">Select Plan</button>
+      </div>
+      <div class="card" data-monthly="29" data-yearly="290">
+        <h3><i class="fas fa-rocket"></i> Pro</h3>
+        <p class="price">$29/month</p>
+        <ul class="plan-features">
+          <li>Unlimited Projects</li>
+          <li>Priority Support</li>
+          <li>Advanced Analytics</li>
+          <li>Custom Integrations</li>
+        </ul>
+        <button class="primaryBtn">Select Plan</button>
+      </div>
+      <div class="card" data-monthly="0" data-yearly="0">
+        <h3><i class="fas fa-cogs"></i> Enterprise</h3>
+        <p class="price">Contact Us</p>
+        <ul class="plan-features">
+          <li>Custom Solutions</li>
+          <li>Dedicated Manager</li>
+          <li>24/7 Premium Support</li>
+          <li>Enterprise Integrations</li>
+        </ul>
+        <button class="primaryBtn">Select Plan</button>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Value Proposition Section -->
+  <section class="value-prop bg-section animate-on-scroll" id="value-prop">
+    <div class="pretext">Why Choose Us</div>
+    <div class="header">Elevate Your Business</div>
+    <div class="description">
+      Experience a high-converting landing page that merges minimalist design with cutting-edge features to skyrocket your conversions.
+    </div>
+    <button class="primaryBtn">Get Started</button>
+    
+   <!-- Reasons Highlights (Tabbed Section) -->
+   <div class="feature-highlights animate-on-scroll" id="feature-highlights">
+    <div class="tabs">
+      <button class="tab active" data-tab="tab1"> 1</button>
+      <button class="tab" data-tab="tab2"> 2</button>
+      <button class="tab" data-tab="tab3"> 3</button>
+      <button class="tab" data-tab="tab4"> 4</button>
+    </div>
+    <div class="tab-content">
+      <div class="tab-panel active" id="tab1">
+        <p>Reason 1: Onboard your users with an intuitive demo.</p>
+      </div>
+      <div class="tab-panel" id="tab2">
+        <p>Reason 2: Engage with real-time analytics and dynamic counters.</p>
+      </div>
+      <div class="tab-panel" id="tab3">
+        <p>Reason 3: Convert visitors into loyal customers with subtle cues.</p>
+      </div>
+            <div class="tab-panel" id="tab4">
+        <p>Reason 4:  Exceptional customer service,</p>
+      </div>
+    </div>
+  </div>
+
+  </section>
+ 
+  
+  <!-- Features Section with Improved Cards (with Icons & Glassmorphism Accent) -->
+  <section class="features animate-on-scroll" id="features">
+    <div class="section-header">
+      <h2>Product Features</h2>
+    </div>
+    <div class="cards">
+      <div class="card glass-card">
+        <span class="feature-icon">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 5H20V19H4V5Z" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 21H16" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 15V9" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+        </span>
+        <h3>Interactive Demo</h3>
+        <p>Engage users with live previews of your product.</p>
+      </div>
+      <div class="card">
+        <span >
+            
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3V21H21" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 14L10 10L13 16L17 8" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+        </span>
+        <h3>Dynamic Analytics</h3>
+        <p>Real-time insights to track user engagement.</p>
+      </div>
+      <div class="card">
+        <span class="feature-icon">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M5 12H19M12 5V19" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+        <h3>Seamless Integration</h3>
+        <p>Easily connect with your favorite tools.</p>
+      </div>
+    </div>
+    <div class="features-cta">
+      <button class="secondaryBtn">Explore Features</button>
+    </div>
+  </section>
+
+    <div class="slider-container">
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <img src="images/banners/Innovate.jpg" alt="Slide 1">
+      <div class="slide-content">
+        <h1>Revolutionize Your SaaS</h1>
+        <p>Discover cutting-edge solutions designed to propel your business forward.</p>
+        <button class="primaryBtn"> Contact Us</button>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="images/banners/built-for-clarity.jpg" alt="Slide 2">
+      <div class="slide-content">
+        <h1>Innovative Technology</h1>
+        <p>Experience seamless integration and robust analytics at your fingertips.</p>
+        <button class="primaryBtn"> Get Started</button>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="images/banners/proven.jpg" alt="Slide 3">
+      <div class="slide-content">
+        <h1>Boost Your Conversions</h1>
+        <p>Transform visitors into loyal customers with our powerful platform.</p>
+        <button class="primaryBtn"> Join Us</button>
+      </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots">
+      <span class="active" data-index="0"></span>
+      <span data-index="1"></span>
+      <span data-index="2"></span>
+    </div>
+  </div>
+
+
+
+  <!-- Testimonials Section (Case Studies & Success Stories) -->
+  <section class="testimonials animate-on-scroll" id="testimonials">
+    <div class="section-header">
+      <h2>What Our Customers Say</h2>
+    </div>
+    <div class="testimonial-container">
+      <div class="testimonial active">
+        <img src="images/testimonials /Cloudmanda.jpg" alt="User 1" />
+        <h4>Cloud Manda</h4>
+        <div class="email">CloudManda@example.com</div>
+        <p>"ProductPulse transformed our landing page into a conversion machine."</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/testimonials /FaithLisomona.jpg" alt="User 2" />
+        <h4>Faith Lisomona</h4>
+        <div class="email">FaithLisomona@example.com</div>
+        <p>"The design is sleek and the features are top-notch. Highly recommended!"</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/testimonials /Emmy.jpg" alt="User 2" />
+        <h4>Emmy Chirwa</h4>
+        <div class="email">emmy@example.com</div>
+        <p>"The design is sleek and the features are top-notch. Highly recommended!"</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/testimonials /Rabeka.jpg" alt="User 2" />
+        <h4>Rabeka Musa</h4>
+        <div class="email">Rabeka@example.com</div>
+        <p>"The design is sleek and the features are top-notch. Highly recommended!"</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/testimonials /Enock.jpg" alt="User 2" />
+        <h4>Enock Liche</h4>
+        <div class="email">Enock@example.com</div>
+        <p>"The design is sleek and the features are top-notch. Highly recommended!"</p>
+      </div>
+    </div>
+    <div class="testimonial-nav">
+      <button id="prevTestimonial"> < Prev </button>
+      <button id="nextTestimonial">Next > </button>
+    </div>
+  </section>
+  
+  
+   <section class="animate-on-scroll bg-section"> 
+<!-- Social Proof Section -->
+  <div class="social-proof animate-on-scroll" id="social-proof">
+    <div class="section-header"><h2>Trusted by Leading Brands</h2></div>
+    <div class="logos">
+      <img src="images/brands/580b57fcd9996e24bc43c51f.png" alt="Brand 1" />
+      <img src="images/brands/58480fd7cef1014c0b5e4943.png" alt="Brand 2" />
+      <img src="images/brands/5fd60827b83d3d0004f54cfc.png" alt="Brand 3" />
+    </div>
+    <div class="real-time-counter">
+      <span id="userCount">0</span> users signed up today!
+    </div>
+  </div>
+   
+  <!-- Dynamic Counter Section -->
+  <div class="dynamic-counter animate-on-scroll" id="dynamic-counter">
+    <div class="counter" data-target="10000">0</div>
+    <p>Businesses Trust ProductPulse</p>
+  </div>
+  <!-- Trust Badges Section -->
+  <div class="trust-badges animate-on-scroll" id="trust-badges">
+    <div class="badges">
+      <div class="badge">GDPR Compliant</div>
+      <div class="badge">97.9% Uptime</div>
+      <div class="badge">Secure Payment</div>
+    </div>
+  </div>
+   </section>
+
+  
+
+  <!-- Contact Section -->
+  <section class="contact-section animate-on-scroll" id="contact-section">
+    <div class="header">Get In Touch</div>
+    <button class="primaryBtn" id="contactUsBtn">Contact Us</button>
+  </section>
+  
+  
+  
+<!-- FAQ Section (Expandable Accordion) -->
+  <section class="faq animate-on-scroll" id="faq">
+    <div class="section-header"><h2>FAQ</h2></div>
+    <div class="faq-item">
+      <button class="faq-question">What is ProductPulse?</button>
+      <div class="faq-answer">ProductPulse is a high-converting landing page template for SaaS products.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How do I customize it?</button>
+      <div class="faq-answer">It comes with easy-to-use custom CSS and JavaScript for personalization.</div>
+    </div>
+  </section>
+<!-- Responsive Footer -->
+  <footer>
+    <div class="footer-container container">
+      <div class="footer-column">
+        <h3>About LaunchPro</h3>
+        <p>Your one-stop solution for modern, high-converting website templates. Crafted with passion and precision.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <p><a href="#features">Features</a></p>
+        <p><a href="#portfolio">Portfolio</a></p>
+        <p><a href="#pricing">Pricing</a></p>
+        <p><a href="#contact">Contact</a></p>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:20px;">&copy; 2025 AdroitCraft. All Rights Reserved.</p>
+  </footer>
+
+
+  <!-- Sticky Floating CTA Button -->
+  <button class="primaryBtn" id="stickyCta" title="Try for Free">Try for Free</button>
+
+  <!-- Modal: Contact Form -->
+  <div class="modal" id="contactModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you! Please fill out the form below and we'll get back to you shortly.</p>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button class="primaryBtn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Referral/Discount Popup -->
+  <div class="modal" id="referralModal">
+    <div class="modal-content">
+      <button class="modal-close" id="referralModalClose">&times;</button>
+      <h2>Referral Discount</h2>
+      <p>Get 10% off when you share ProductPulse with your network!</p>
+      <button class="primaryBtn" id="shareBtn">Share Now</button>
+    </div>
+  </div>
+  
+  <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+  <!-- Modal: Exit Intent Popup -->
+  <div class="modal" id="exitIntentModal">
+    <div class="modal-content">
+      <button class="modal-close" id="exitIntentClose">&times;</button>
+      <h2>Wait, don't go!</h2>
+      <p>Before you leave, get an exclusive offer: 15% off your first purchase!</p>
+      <button class="primaryBtn" id="exitOfferBtn">Claim Offer</button>
+    </div>
+    
+<div class="social-icons">
+  <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+  <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+
+  </div>
+
+  <!-- Modal: Easter Egg (Triggered by Logo Clicks) -->
+  <div class="modal" id="easterEggModal">
+    <div class="modal-content">
+      <h2>Easter Egg Unlocked!</h2>
+      <p>You've discovered the hidden surprise. Enjoy a virtual high five!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
